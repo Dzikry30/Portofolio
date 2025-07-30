@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio | Fahmi Dzikry </title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Navbar scroll effect */
+    #navbar.scrolled {
+      background-color: #0f172a;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    /* Underline nav hover */
+    .nav-link::after {
+      content: "";
+      display: block;
+      width: 0%;
+      height: 2px;
+      background-color: white;
+      transition: width 0.3s;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+
+    .animate-spin-slow {
+        animation: spin-slow 10s linear infinite;
+    }
+
+  </style>
+</head>
+<body class="bg-[#0f172a] text-white">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 ">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <h1 class="text-2xl font-bold">Portofolio</h1>
+        <ul class="hidden md:flex gap-4 text-sm font-semibold">
+            <li><a href="#" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#projects" class="nav-link">Project</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900 text-white px-6 py-4 space-y-4">
+          <a href="#" class="block hover:underline">Home</a>
+          <a href="#about" class="block hover:underline">About</a>
+          <a href="#projects" class="block hover:underline">Project</a>
+          <a href="#contact" class="block hover:underline">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center px-4 bg-[radial-gradient(circle_at_center,_#1e293b,_#0f172a,_#000)]">
+    <div class="max-w-7xl px-6 mx-auto flex flex-col-reverse md:flex-row md:items-center gap-12 w-full">
+        
+        <!-- Teks -->
+        <div class="text-center md:text-left md:w-1/2 md:flex md:flex-col md:justify-center">
+        <p class="text-gray-400 mb-2">Hello,</p>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+            I Am <span class="text-blue-400">Fahmi Dzikry</span>
+        </h1>
+        <p class="text-gray-300 mb-6">
+            Saya Siswa RPL yang fokus pada pengembangan website modern.
+        </p>
+        <div>
+        <a href="#contact" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-full transition duration-300">
+        Let's Talk →
+        </a>
+        </div>
+        </div>
+
+        <!-- Foto -->
+        <div class="md:w-1/2 flex justify-center md:justify-end mt-20 md:mt-0">
+        <div class="relative w-64 h-64 flex items-center justify-center">
+            <div class="absolute w-72 h-72 bg-blue-500 opacity-30 blur-3xl rounded-full z-0"></div>
+            <div class="relative w-64 h-64 rounded-full overflow-hidden shadow-2xl border-4 border-blue-500 hover:scale-105 transition duration-500">
+            <img src="assets/images/1.png" alt="Foto Fahmi" class="w-full h-full object-cover" />
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <section class="py-16 bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-6">
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+            <!-- Item 1 -->
+            <div class="swiper-slide flex items-center justify-center">
+            <img src="assets/icons/visual studio.png" alt="VS Code" class="w-20 h-20 object-contain" />
+            </div>
+
+            <!-- Item 2 -->
+            <div class="swiper-slide flex items-center justify-center">
+            <img src="assets/icons/canva.png" alt="canva" class="w-20 h-20 object-contain" />
+            </div>
+
+            <!-- Item 3 -->
+            <div class="swiper-slide flex items-center justify-center">
+            <img src="assets/icons/android.png" alt="android studio" class="w-20 h-20 object-contain" />
+            </div>
+
+            <!-- Item 4 -->
+            <div class="swiper-slide flex items-center justify-center">
+            <img src="assets/icons/html.png" alt="html" class="w-20 h-20 object-contain" />
+            </div>
+
+            <!-- Item 5 -->
+            <div class="swiper-slide flex items-center justify-center">
+            <img src="assets/icons/css.png" alt="css" class="w-20 h-20 object-contain" />
+            </div>
+
+            <!-- Item 6 -->
+            <div class="swiper-slide flex items-center justify-center">
+            <img src="assets/icons/js.png" alt="js" class="w-20 h-20 object-contain" />
+            </div>
+
+            <!-- Item 7 -->
+            <div class="swiper-slide flex items-center justify-center">
+            <img src="assets/icons/laravel.png" alt="Laravel" class="w-20 h-20 object-contain" />
+            </div>
+
+            <!-- Item 8 -->
+            <div class="swiper-slide flex items-center justify-center">
+            <img src="assets/icons/bootstrap.png" alt="bootstrap" class="w-20 h-20 object-contain" />
+            </div>
+
+            <!-- Item 9 -->
+            <div class="swiper-slide flex items-center justify-center">
+            <img src="assets/icons/wordperss.png" alt="wordperss" class="w-20 h-20 object-contain" />
+            </div>
+
+            <!-- Item 10 -->
+            <div class="swiper-slide flex items-center justify-center">
+            <img src="assets/icons/php.png" alt="php" class="w-20 h-20 object-contain" />
+            </div>
+
+            <!-- Item 11 -->
+            <div class="swiper-slide flex items-center justify-center">
+            <img src="assets/icons/tailwind.png" alt="tailwind" class="w-20 h-20 object-contain" />
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- About + Skills Section (Gabungan 2 Kolom + Bar) -->
+    <section id="about" class="py-16 bg-gray-900 text-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+          <!-- About -->
+          <div class="text-left">
+            <h2 class="text-3xl font-bold mb-4">Tentang Saya</h2>
+            <p class="text-gray-300 text-lg mb-4 leading-relaxed">
+              Saya <span class="font-semibold text-blue-400">Muhammad Fahmi Dzikry</span>, siswa kelas 12 jurusan Rekayasa Perangkat Lunak di SMKN 2 Kota Sukabumi. 
+              Saya antusias di dunia <strong>pengembangan web</strong>, <strong>desain UI/UX</strong>, serta terbiasa menggunakan teknologi seperti 
+              <span class="text-blue-400">HTML, CSS, JavaScript, Tailwind, PHP, Laravel</span>, dan lainnya.
+            </p>
+            <p class="text-gray-400 italic mb-6">
+              "Bagi saya, teknologi bukan cuma alat, tapi cara menyampaikan ide dan solusi untuk masa depan."
+            </p>
+            <a href="/about" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-full transition duration-300">
+              Selengkapnya
+            </a>
+          </div>
+
+          <!-- Skills with Bar -->
+          <div>
+            <h2 class="text-3xl font-bold text-white mb-6 lg:mb-10">Keahlian Saya</h2>
+            <div class="space-y-6">
+
+              <!-- Skill 1: UI/UX Design -->
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-base font-medium text-green-400">UI/UX Design</span>
+                  <span class="text-sm text-gray-300">70%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-4">
+                  <div class="bg-green-400 h-4 rounded-full" style="width: 70%;"></div>
+                </div>
+              </div>
+
+              <!-- Skill 2: Web Development -->
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-base font-medium text-blue-400">Web Development</span>
+                  <span class="text-sm text-gray-300">80%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-4">
+                  <div class="bg-blue-400 h-4 rounded-full" style="width: 80%;"></div>
+                </div>
+              </div>
+
+              <!-- Skill 3: Creative Content -->
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-base font-medium text-purple-400">Creative Content</span>
+                  <span class="text-sm text-gray-300">65%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-4">
+                  <div class="bg-purple-400 h-4 rounded-full" style="width: 65%;"></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-gray-900 text-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-4">Karya Terbaru</h2>
+        <p class="text-center text-gray-400 mb-12">
+          Beberapa project yang pernah saya kerjakan selama belajar dan freelance.
+        </p>
+
+        <!-- Mobile: Tampil 3 -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:hidden">
+          <!-- Project 1 -->
+          <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+            <img src="assets/projects/tastyfood (1).jpeg" class="w-full h-48 object-cover" />
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-center">TastyFood Website</h3>
+              <p class="text-sm text-gray-400 text-center mt-2">
+                Website katalog makanan dengan animasi dan desain modern menggunakan Tailwind CSS
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+            <img src="assets/projects/radjasyariah (1).jpeg" class="w-full h-48 object-cover" />
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-center">Radja Syariah</h3>
+              <p class="text-sm text-gray-400 text-center mt-2">
+                Website properti statis menampilkan rumah-rumah dari Jabodetabek dengan filter dan pencarian.
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+            <img src="assets/projects/kuliner.jpeg" class="w-full h-48 object-cover" />
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-center">Web Rekomendasi Makanan</h3>
+              <p class="text-sm text-gray-400 text-center mt-2">
+                Aplikasi berbasis Laravel untuk memberikan dan melihat rekomendasi tempat makan.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Desktop: Tampil 6 -->
+        <div class="hidden md:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <!-- Project 1 -->
+          <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+            <img src="assets/projects/tastyfood (1).jpeg" class="w-full h-48 object-cover" />
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-center">TastyFood Website</h3>
+              <p class="text-sm text-gray-400 text-center mt-2">
+                Website katalog makanan dengan animasi dan desain modern menggunakan Tailwind CSS
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+            <img src="assets/projects/radjasyariah (1).jpeg" class="w-full h-48 object-cover" />
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-center">Radja Syariah</h3>
+              <p class="text-sm text-gray-400 text-center mt-2">
+                Website properti statis menampilkan rumah-rumah dari Jabodetabek dengan filter dan pencarian.
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+            <img src="assets/projects/kuliner.jpeg" class="w-full h-48 object-cover" />
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-center">Web Rekomendasi Makanan</h3>
+              <p class="text-sm text-gray-400 text-center mt-2">
+                Aplikasi berbasis Laravel untuk memberikan dan melihat rekomendasi tempat makan.
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+            <img src="assets/projects/tiketkuy.jpeg" class="w-full h-48 object-cover" />
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-center">TiketKuy - Event Website</h3>
+              <p class="text-sm text-gray-400 text-center mt-2">
+                Website tiket & info event. Menampilkan daftar acara, kategori, serta booking menggunakan Laravel & Bootstrap.
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+            <img src="assets/projects/ngulik sukabumi (1).jpeg" class="w-full h-48 object-cover" />
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-center">Ngulik Sukabumi</h3>
+              <p class="text-sm text-gray-400 text-center mt-2">
+                Website eksplorasi tempat menarik, kuliner, dan budaya lokal Sukabumi. Dibuat dengan Laravel dan Tailwind CSS.
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+            <img src="assets/projects/portofolio.jpeg" class="w-full h-48 object-cover" />
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-center">Website Portfolio</h3>
+              <p class="text-sm text-gray-400 text-center mt-2">
+                Website ini saya bangun sebagai personal branding menggunakan HTML & Tailwind. Simple, clean, dan responsive.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tombol -->
+        <div class="text-center mt-12">
+          <a href="project-lainnya.html" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-full transition duration-300">
+            Lihat Project Lainnya
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-gray-900 text-white py-16 px-6 lg:px-24">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        
+        <!-- Kontak Info -->
+        <div>
+          <h2 class="text-3xl font-bold mb-6">Hubungi Kami</h2>
+          <ul class="space-y-4 text-lg">
+            <li class="flex items-center gap-4">
+              <img src="https://img.icons8.com/ios-glyphs/30/ffffff/email.png" alt="Email" class="w-6 h-6" />
+              <a href="mailto:fahmidzikry@gmail.com" class="hover:underline text-white">fahmidzikry@gmail.com</a>
+            </li>
+            <li class="flex items-center gap-4">
+              <img src="https://img.icons8.com/ios-glyphs/30/ffffff/whatsapp.png" alt="WhatsApp" class="w-6 h-6" />
+              <a href="https://wa.me/6281553084669" class="hover:underline" target="_blank">+62 815-5308-4669</a>
+            </li>
+            <li class="flex items-center gap-4">
+              <img src="https://img.icons8.com/ios-glyphs/30/ffffff/instagram-new.png" alt="Instagram" class="w-6 h-6" />
+              <a href="https://instagram.com/fahmidz_30" class="hover:underline" target="_blank">@fahmidz_30</a>
+            </li>
+            <li class="flex items-start gap-4">
+              <img src="https://img.icons8.com/ios-glyphs/30/ffffff/marker--v1.png" alt="Alamat" class="w-6 h-6 mt-1" />
+              <p>Jalan Otista Gang Karya Bakti, RT.02/RW.02, Citamiang, Kota Sukabumi, Jawa Barat</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Google Maps -->
+        <div>
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d4228.858687291623!2d106.93256757499667!3d-6.927946993071863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwNTUnNDAuNiJTIDEwNsKwNTYnMDYuNSJF!5e1!3m2!1sid!2sid!4v1753800259691!5m2!1sid!2sid"
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade" class="rounded-lg shadow-lg">
+          </iframe>
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400 py-6">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <p>Crafted by <span class="text-white font-semibold">Fahmi Dzikry</span> &copy; 2025</p>
+        <p class="mt-2 italic">"Coding is not just work, it's my way to express ideas."</p>
+      </div>
+    </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 60) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+    const swiper = new Swiper(".mySwiper", { 
+        slidesPerView: 7,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            320: {
+            slidesPerView: 3,
+            spaceBetween: 15,
+            },
+            480: {
+            slidesPerView: 4,
+            spaceBetween: 15,
+            },
+            768: {
+            slidesPerView: 6,
+            spaceBetween: 20,
+            },
+            1024: {
+            slidesPerView: 7,
+            spaceBetween: 20,
+            }
+        }
+        });
+  </script>
+</body>
+</html>
